@@ -33,6 +33,7 @@ instance Monad Tree where
 
 instance Applicative Tree where
 	pure x = Leaf x
+	(Leaf f) <*> (Node x y) = Node (Leaf f <*> x) (Leaf f <*> y)
 	(Leaf f) <*> (Leaf x) = Leaf (f x)
 	(Node f g) <*> (Node x y) = Node (f <*> x) (g <*> y)
 	_ <*> _ = Vacancy  
