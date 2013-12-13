@@ -1,0 +1,4 @@
+haskell
+=======
+
+Projects in Haskell!
