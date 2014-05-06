@@ -73,7 +73,7 @@ dispMessages greeting subtitle messages = do
     -- stopping when it would collide with the three lines at the top
     setCursorPosition (rows - 2) 0
     execList $ map (printMessage rows cols) 
-        (pickDisplayMessages rows cols lines)
+        (pickDisplayMessages rows cols messages)
 
     --Put the cursor back at the bottom of the screen
     setCursorPosition rows 0
